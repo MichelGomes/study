@@ -11,7 +11,7 @@ COPY message.go /go/src/fullcycle
 WORKDIR /go/src/fullcycle/
 RUN go mod init message
 RUN go mod tidy
-RUN CGO_ENABLED=0 GOOS=linux go build -o message
+RUN CGO_ENABLED=0 GOOS=linux go build  -gcflags=all="-l -B" -ldflags="-w -s" -o message
 #debug proporse
 #RUN ls /go/src/fullcycle
 
