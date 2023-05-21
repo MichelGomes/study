@@ -1,0 +1,1 @@
+ReadME for GO container project. Multi staged build
